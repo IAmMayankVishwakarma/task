@@ -27,7 +27,7 @@
     <tbody>
         @foreach($departments as $department)
         <tr>
-            <td>{{ $department->id }}</td>
+            <td>{{ $loop->iteration }} (DB id:{{ $department->id }})</td>
             <td>{{ $department->name }}</td>
             <td>
                 <span class="badge bg-{{ $department->status == 'active' ? 'success' : 'danger' }}">
