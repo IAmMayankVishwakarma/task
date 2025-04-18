@@ -20,8 +20,12 @@ class EmployeeController extends Controller
         if ($request->has('department_id')) {
             $query->where('department_id', $request->department_id);
         }
-        
-        return $query->get();
+        $employees = $query->get();
+        return response()->json([
+            "status" => true,
+            "message" => "data fetched succefully",
+            "employeeData"=> $employees
+        ]);
     }
 
     /**

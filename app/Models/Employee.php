@@ -9,7 +9,7 @@ class Employee extends Model
     protected $primaryKey = 'id';
     public function getRouteKeyName()
 {
-    return 'employee_id'; // or whatever your unique column is
+    return 'id'; 
 }
     protected $fillable = [
         'name', 'email', 'phone', 
